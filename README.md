@@ -1,7 +1,7 @@
 [readme.md](https://github.com/user-attachments/files/33508731/readme.md)
 # 🛒 Laravel Store
 
-A robust and modern E-Commerce web application built with **Laravel**, leveraging **Livewire** for dynamic UI interactions and featuring an integrated admin panel.
+A robust and modern E-Commerce web application built with **Laravel**, leveraging **Livewire** for dynamic UI interactions and featuring an integrated admin panel. Link https://laravel-store.duckdns.org
 
 ## 📸 Project Screenshots
 
