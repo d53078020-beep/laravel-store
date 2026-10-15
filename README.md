@@ -1,58 +1,111 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+[readme.md](https://github.com/user-attachments/files/33508731/readme.md)
+# 🛒 Laravel Store
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A robust and modern E-Commerce web application built with **Laravel**, leveraging **Livewire** for dynamic UI interactions and featuring an integrated admin panel.
 
-## About Laravel
+## 📸 Project Screenshots
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+<img width="1470" height="733" alt="Знімок екрана 2026-10-15 о 21 31 19" src="https://github.com/user-attachments/assets/ad507c33-c2c5-44b6-9d15-ffa2038dbca8" />
+<img width="1470" height="733" alt="Знімок екрана 2026-10-15 о 21 31 10" src="https://github.com/user-attachments/assets/8a2c9801-1dee-4614-bc29-50e714a38199" />
+<img width="1470" height="733" alt="Знімок екрана 2026-10-15 о 21 31 32" src="https://github.com/user-attachments/assets/bc3bdd69-441c-4cba-9bb8-64ca9ff46bce" />
+<img width="1470" height="733" alt="Знімок екрана 2026-10-15 о 21 31 59" src="https://github.com/user-attachments/assets/6237e92a-c851-46d4-b1a4-46ca9d2c90d8" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Key Features
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🛍️ For Customers:
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* **Interactive Catalog:** Real-time product search, filtering, and sorting without page reloads (powered by Livewire).
+* **Shopping Cart:** Seamlessly add, remove, and update product quantities.
+* **Checkout Process:** Data validation, shipping selection, and payment options.
+* **User Dashboard:** View order history and real-time order processing status.
 
-## Agentic Development
+### 🛠️ For Administrators:
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* **Admin Dashboard:** Intuitive management interface for administrative tasks.
+* **Catalog Management:** Full CRUD operations for products, categories, and brands.
+* **Order Processing:** Update order statuses (e.g., Pending, Shipped, Completed).
+* **Role-Based Access Control:** Role separation for regular Users and Administrators.
+
+## 🛠 Tech Stack
+
+* **PHP:** `^8.1` or higher
+* **Framework:** [Laravel](https://laravel.com/)
+* **Reactive UI:** [Livewire](https://livewire.laravel.com/)
+* **Frontend / Styling:** Tailwind CSS / Blade Templates
+* **Database:** MySQL / PostgreSQL
+* **Iconography:** Heroicons / FontAwesome
+
+## 🚀 Local Installation & Setup
+
+Follow these steps to get the project up and running locally:
+
+### 1. Clone the Repository
 
 ```bash
-composer require laravel/boost --dev
-
-php artisan boost:install
+git clone https://github.com/YOUR_USERNAME/laravel-store.git
+cd laravel-store
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+### 2. Install Dependencies
 
-## Contributing
+```bash
+# Install PHP dependencies
+composer install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Install JS / CSS dependencies
+npm install
+```
 
-## Code of Conduct
+### 3. Environment Configuration (`.env`)
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+# Copy the example environment file
+cp .env.example .env
 
-## Security Vulnerabilities
+# Generate a unique application key
+php artisan key:generate
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Open your `.env` file and set up your database parameters:
 
-## License
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel_store
+DB_USERNAME=root
+DB_PASSWORD=
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 4. Database Migrations & Seeding
+
+```bash
+# Run migrations along with seeders (creates demo products & default admin account)
+php artisan migrate --seed
+```
+
+### 5. Build Assets & Start Server
+
+```bash
+# Compile frontend assets in development mode
+npm run dev
+
+# In another terminal tab/window, start the local server
+php artisan serve
+```
+
+The application will be accessible at: **`http://localhost:8000`**
+
+## 🔑 Demo Credentials (If applicable)
+
+If your database seeders generate default users, you can list them here:
+
+* **Admin Account:** `admin@example.com` / `password`
+* **Customer Account:** `user@example.com` / `password`
+
+## 📝 License
+
+This project is open-source software licensed under the [MIT license](LICENSE).
